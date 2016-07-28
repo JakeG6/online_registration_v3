@@ -1,25 +1,28 @@
 @media screen and (min-width: 768px) {
+	
+	body {
+	background-image: url("../images/yellow-wallpaper.jpg");
+	background-attachment: fixed;
+	}
+
 	.wrapper {
 		width: 75%;
 	}
 
-	
-
-	div br {
-		display: none;
-	}
 
 	.contact-label {
-		background-color: pink;	
+		float: left;
+		margin-top: 1.4em;
+		width:25%;
 	}
-
 
 	input[type="text"], input[type="email"], select {
-	margin-left: auto;
-	width: 50%;
-	
+		width: 75%;
 	}
-
+	
+	.form-item br {
+		display: none;
+	}
 
 }
 

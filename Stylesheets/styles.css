@@ -14,7 +14,8 @@ legend {
 
 
 ::-webkit-input-placeholder {
-   font-style: italic;}
+   font-style: italic;
+}
 
 
 /* HORIZONTAL RULES */
@@ -40,13 +41,20 @@ legend {
 .wrapper {
 	/*background-color: green;*/
 	width: 95%;
+	padding: 7em 0 1em 0;
+
 	margin: 0 auto;
+	
 }
 
 /*HEADER LAYOUT*/
 header {
 	padding-top:.5em;
 	padding-bottom: .5em;
+	position: fixed;
+		width: 100%;
+	z-index: 1;
+
 }
 
 header h2 {
@@ -59,7 +67,7 @@ header h2 {
 }
 
 #call-to-action h2 {
-	margin-bottom: .5em;
+	margin-bottom: 0;
 } 
 
 #call-to-action p {
@@ -77,7 +85,7 @@ header h2 {
 }
 
 fieldset {
-	padding:none;
+	
 	border: 0px;
 }
 
@@ -96,10 +104,13 @@ input[type="text"], input[type="email"], select {
 	border:none;
 	border-radius: 5px;
 	padding: 0 1em;
+	outline: 0;
+	transition: all .2s;
 }
 
 ::-webkit-input-placeholder {
    text-align: right;
+   padding-right: 1em;
 }
 
 #state {
@@ -120,16 +131,26 @@ legend {
 }
 
 #zip {
-	width:50%;
+	width:25%;
 }
+
+
+
+/*NEWSLETTER*/
 
 .newsletter-label {
 	margin-left: 1em;
 }
 
-input[type="submit"] {
-	
+input[type="radio"], input[type="checkbox"], #user-topics{
+	outline: 0;
+	transition: all .2s;
+	background-color: lightgrey;
+}
 
+
+/* SIGNUP BUTTON */
+input[type="submit"] {
 	height: 3em;
 	width: 100%;
 	border-radius: 5px;
@@ -139,15 +160,47 @@ input[type="submit"] {
 	box-shadow: 0 3px 0 #3ca29c;
 	background-color: #20B2AA;
 	color:white;
+	outline: 0;
+	transition: all .2s;
 }
 
+/*be sure to come back with bootstrap to 
+change the color of the radio inputs and checkboxes */
+
+
+
+/*FOCUS & HOVER STATES*/
+
+#username:focus,#email:focus, #phone:focus, 
+#address:focus, #city:focus, #state:focus, #zip:focus, 
+#user-topics:focus {
+	border: 5px solid #2F4F4F;
+	
+}
+
+input[type="checkbox"]:checked {
+	border: 1px solid #2F4F4F;
+}
+
+
 /*COLORS*/
+
+
+
+.wrapper {
+	background-color: white;
+}
+
+fieldset {
+	background-color: white;
+}
+
 
 .signup-paragraph {
 	color: grey;
 }
 
-label, p {
+.thick-line, .thin-line, label, p {
 	color: #2F4F4F;
 }
 
@@ -156,17 +209,8 @@ header {
 	color:white;
 }
 
-.thick-line, .thin-line {
-	background-color: #2F4F4F
-}
-
-
-input[type=text], input[type=email], select, 
-input[type=checkbox], #state {
-	background-color: lightgrey;
-}
-
-#user-topics {
+input[type="text"], input[type="email"], select, 
+input[type="checkbox"], #state, #user-topics {
 	background-color: lightgrey;
 }
 

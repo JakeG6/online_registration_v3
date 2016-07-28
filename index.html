@@ -1,8 +1,9 @@
-<DOCTYPE! HTML>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width">
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<title>The Code Review | Newsletter Signup</title>
 		<link rel="stylesheet" href="Stylesheets/styles.css">
 		<link rel="stylesheet" href="Stylesheets/normalize.css">
 		<link rel="stylesheet" href="Stylesheets/responsive.css">
@@ -22,34 +23,32 @@
 				</section>
 				<hr class="thick-line">
 				<hr class="thin-line">			
-					<form>
-						<fieldset id="contact-information">
-
-							<legend>Contact Information</legend>
-							
-							<div id="contact-container">
-								<div class="form-item">
-									<label class="contact-label" for="username">Full Name</label> <br> 
-									<input type="text" name="username" placeholder="Required" id="username"> <br>
-								</div>
-								<div class="form-item">
-									<label class="contact-label" for="email">Email Address</label> <br> 
-									<input type="email" name="email" placeholder="Required" id="email"> <br>
-								</div>
-								<div class="form-item">
-									<label class="contact-label" for="phone">Phone Number</label> <br> 
-									<input type="text" name="phone" id="phone"> <br>
-								</div>
-								<div class="form-item">	
-									<label class="contact-label" for="address">Street Address</label> <br> 
-									<input type="text" name="address" id="address"> <br>
-								</div>	
-								<div class="form-item">	
-									<label class="contact-label" for="city">City</label> <br> 
-									<input type="text" name="city" id="city"> <br>
-								</div>
-								<div class="form-item">		
-									<label class="contact-label" for="state">State</label> <br> 
+				<form>
+					<fieldset id="contact-information">
+						<legend>Contact Information</legend>
+						<div id="contact-container">
+							<div class="form-item"></div>
+								<label class="contact-label" for="username">Full Name</label> <span>
+								<input type="text" name="username" placeholder="Required" id="username"></span> 
+							</div>
+							<div class="form-item">
+								<label class="contact-label" for="email">Email Address</label> 
+								<input type="email" name="email" placeholder="Required" id="email"> 
+							</div>
+							<div class="form-item">
+								<label class="contact-label" for="phone">Phone Number</label> 
+								<input type="text" name="phone" id="phone"> 
+							</div>
+							<div class="form-item">	
+								<label class="contact-label" for="address">Street Address</label> 
+								<input type="text" name="address" id="address"> 
+							</div>	
+							<div class="form-item">	
+								<label class="contact-label" for="city">City</label> 
+								<input type="text" name="city" id="city"> 
+							</div>
+							<div class="form-item">		
+									<label class="contact-label" for="state">State</label> 
 									<select name="state" id="state">
 											<option value="state-select">Choose State</option>
 											<option value="Alabama">Alabama</option>
@@ -101,49 +100,46 @@
 											<option value="West-Virginia">West Virginia</option>
 											<option value="Wisconsin">Wisconsin</option>
 											<option value="Wyoming">Wyoming</option>
-										</select><br>
-								</div>
-								<div class="form-item">		
-									<label class="contact-label" for="zip">Zip Code</label> <br> 
-									<input type="text" name="zip" id="zip">
-								</div>
-							</div>	
-						</fieldset>
-						<hr class="thin-line">
-						<fieldset>
-							<legend>Newsletter</legend>
-							<p>Select the newsletters you would like to receive </p>
-							<div class="form-item">
-								<input type="checkbox" name="html-news" id="html-news" unchecked> 
-								<label class="newsletter-label" for="html-news"> HTML News</label><br>
+										</select>
 							</div>
-							<div class="form-item">
-								<input type="checkbox" name="css-news" id="css-news" unchecked> 
-								<label class="newsletter-label" for="css-news"> CSS News</label><br>
-							</div>	
-							<div class="form-item">
-								<input type="checkbox" name="javascript-news" id="javascript-news" unchecked>
-								<label class="newsletter-label" for="javascript-news"> Javascript News</label><br>
+							<div class="form-item">		
+								<label class="contact-label" for="zip">Zip Code</label><br>
+								<input type="text" name="zip" id="zip">
 							</div>
-							
+						</div>	
+					</fieldset>
+					<hr class="thin-line">
+					<fieldset>
+						<legend>Newsletter</legend>
+						<p>Select the newsletters you would like to receive </p>
+						<div class="form-item">
+							<input type="checkbox" name="html-news" id="html-news" unchecked> 
+							<label class="newsletter-label" for="html-news"> HTML News</label><br>
+						</div>
+						<div class="form-item">
+							<input type="checkbox" name="css-news" id="css-news" unchecked>
+							<label class="newsletter-label" for="css-news"> CSS News</label><br>
+						</div>	
+						<div class="form-item">
+							<input type="checkbox" name="javascript-news" id="javascript-news" unchecked>
+							<label class="newsletter-label" for="javascript-news"> Javascript News</label><br>
+						</div>
 						
-							<p>Newsletter format</p>
-							
-							<div class="form-item">
-								<input type="radio" name="html-format" value="html-format" id="html-format" unchecked> <label class="newsletter-label" for="html-format"> HTML News</label><br>
-							</div>
-							<div class="form-item">
-								<input type="radio" name="plain-format" value="plain-format" id="plain-format" unchecked> <label class="newsletter-label" for="plain-format"> Plain text</label><br>
-							</div>
+						<p>Newsletter format</p>
+						
+						<div class="form-item">
+							<input type="radio" name="rad-answer" value="html-format" id="html-format" unchecked> <label class="newsletter-label" for="html-format"> HTML News</label><br>
+						</div>
+						<div class="form-item">
+							<input type="radio" name="rad-answer" value="plain-format" id="plain-format" unchecked> <label class="newsletter-label" for="plain-format"> Plain text</label><br>
+						</div>
+						<label for="user-topics">Other topics you'd like to hear about</label> <br>
+						<textarea id="user-topics" name="user-topics" id="user-topics"></textarea>
 
-							<label for="user-topics">Other topics you'd like to hear about</label> <br>
-							<textarea id="user-topics" name="user-topics" id="user-topics"></textarea>
-
-							<input type="submit" id="submit-button" value="Sign Up">
-						</fieldset>
-					
-
-					</form>
+						<input type="submit" id="submit-button" value="Sign Up">
+					</fieldset>
+				</form>
 			</div>	
+			
 		</body>
 </html>
