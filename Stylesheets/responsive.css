@@ -11,13 +11,12 @@
 
 
 	.contact-label {
-		float: left;
-		margin-top: 1.4em;
+		display:inline-block;
 		width:25%;
 	}
 
 	input[type="text"], input[type="email"], select {
-		width: 75%;
+		width: 74%;
 	}
 	
 	.form-item br {

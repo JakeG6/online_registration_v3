@@ -1,9 +1,19 @@
 /*FONT*/
+
+*,*:before,*:after {
+	box-sizing:border-box;
+}
+
+html,body {
+	height:100%;
+	width:100%;
+}
+
 body {
 	font-family: 'Merriweather', serif;
 }
 
-label, p, #username, #email, #state {
+label, p, #username, #email, #state, #copyright {
 	font-weight: 300;
 }
 
@@ -13,7 +23,7 @@ legend {
 }
 
 
-::-webkit-input-placeholder {
+::-webkit-input-placeholder, #copyright {
    font-style: italic;
 }
 
@@ -40,7 +50,7 @@ legend {
 
 .wrapper {
 	/*background-color: green;*/
-	width: 95%;
+	width: 90%;
 	padding: 7em 0 1em 0;
 
 	margin: 0 auto;
@@ -81,7 +91,7 @@ header h2 {
 /*CONTACT LAYOUT*/
 
 .contact-label {
-	margin-bottom: 1em;
+	/*margin-bottom: 1em;*/
 }
 
 fieldset {
@@ -105,7 +115,7 @@ input[type="text"], input[type="email"], select {
 	border-radius: 5px;
 	padding: 0 1em;
 	outline: 0;
-	transition: all .2s;
+	transition: all .2s ease-in-out;
 }
 
 ::-webkit-input-placeholder {
@@ -144,7 +154,7 @@ legend {
 
 input[type="radio"], input[type="checkbox"], #user-topics{
 	outline: 0;
-	transition: all .2s;
+	transition: all .2s ease-in-out;
 	background-color: lightgrey;
 }
 
@@ -157,35 +167,39 @@ input[type="submit"] {
 	border-width: 0px;
 	border-bottom: 2px;
 	margin: 2em auto;
-	box-shadow: 0 3px 0 #3ca29c;
 	background-color: #20B2AA;
 	color:white;
 	outline: 0;
-	transition: all .2s;
+	transition: all .2s ease-in-out;
+}
+
+#copyright {
+	text-align: center;
 }
 
 /*be sure to come back with bootstrap to 
 change the color of the radio inputs and checkboxes */
-
-
 
 /*FOCUS & HOVER STATES*/
 
 #username:focus,#email:focus, #phone:focus, 
 #address:focus, #city:focus, #state:focus, #zip:focus, 
 #user-topics:focus {
-	border: 5px solid #2F4F4F;
-	
+	/*border: 5px solid #2F4F4F;*/
+	box-shadow:#2F4F4F 0px 0px 0px 5px;
 }
 
 input[type="checkbox"]:checked {
 	border: 1px solid #2F4F4F;
 }
 
+input[type="submit"]:hover {
+	background-color: #0f5753;
+	cursor: pointer;
+}
+
 
 /*COLORS*/
-
-
 
 .wrapper {
 	background-color: white;
@@ -194,7 +208,6 @@ input[type="checkbox"]:checked {
 fieldset {
 	background-color: white;
 }
-
 
 .signup-paragraph {
 	color: grey;
@@ -219,3 +232,64 @@ input[type="submit"] {
 }
 
 
+/*CHECKBOXES AND RADIOS */
+
+input[type="checkbox"],input[type="radio"] {
+	display:none;
+}
+
+input[type="checkbox"] + label ,input[type="radio"] + label {
+	position:relative;
+
+}
+
+input[type="checkbox"] + label:before {
+	content:"";
+	display:inline-block;
+	width:16px;
+	height:16px;
+	border-radius:2px;
+	transition:all 0.2s ease-in-out;
+	background: lightgrey;
+}
+
+input[type="checkbox"]:checked + label:before {
+	border: 2px solid #2F4F4F;
+}
+
+
+input[type="checkbox"] + label:after {
+	position:absolute;
+	left:1px;
+	top:-6px;
+	content:"✔";
+	display:inline-block;
+	width:0px;
+	height:24px;
+	overflow:hidden;
+	font-size:1.2em;
+	opacity:0;
+	transition:opacity 0.2s ease-in-out;
+}
+
+input[type="checkbox"]:checked + label:after {
+	opacity:1;
+	width:24px;
+	transition:opacity 0.2s ease-in-out, width 0.5s ease-in-out;
+}
+
+
+input[type="radio"] + label:before {
+	content:"";
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background: lightgrey;
+	border-radius:8px;
+	transition:all 0.2s ease-in-out;
+}
+
+input[type="radio"]:checked + label:before {
+	background:#2F4F4F;
+	box-shadow:white 0px 0px 0px 2px inset,#2F4F4F 0px 0px 4px 0px;
+}
